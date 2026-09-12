@@ -10,12 +10,12 @@ void grid_assing(int grid[4][4], int constant, int roworcolum, int cres_or_decre
             if (cres_or_decre== 0)
                 grid[constant][x] = x + 1;
             else
-                grid[x][constant] = 4 - x;
+                grid[constant][x] = 4 - x;
         }
         else 
         {
             if (cres_or_decre == 0)
-                grid[constant][x] = x + 1;
+                grid[x][constant] = x + 1;
             else
                 grid[x][constant] = 4 - x;
         }
