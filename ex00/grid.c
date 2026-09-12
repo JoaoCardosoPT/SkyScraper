@@ -1,4 +1,5 @@
 // Fill the grid 
+#include <stdio.h>
 void grid_assing(int grid[4][4], int constant, int roworcolum, int cres_or_decre)
 {
     int x = 0;
@@ -40,7 +41,7 @@ void assing(int grid[4][4], int i, int j, int arr[4][4])
 {
     if (arr[i][j] == 1)
        clue_1(grid, i, j); 
-    else if (arr[i][i] == 4)
+    else if (arr[i][j] == 4)
        grid_assing(grid, j, i < 2, i % 2); 
 }
 
@@ -52,11 +53,10 @@ void start_grid(int grid[4][4], int arr[4][4])
             int j = 0; 
             while(j < 4)
             {
-                // se a pista vale 4 ou vale 1
+                // if the clue is 1 or 4 
+                // if it is 3 or 2 dont do nothing 
                 if(arr[i][j] == 4  || arr[i][j] == 1)
                     assing(grid, i, j, arr);
             }
     }
-
 }
-
